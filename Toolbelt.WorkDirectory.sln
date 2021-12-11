@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toolbelt.WorkDirectory", "Toolbelt.WorkDirectory\Toolbelt.WorkDirectory.csproj", "{925E5FEB-3A41-44F3-AC76-8203831F4577}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{F576CC5D-5A1F-4889-BDB1-360868271A00}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+		RELEASE-NOTES.txt = RELEASE-NOTES.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{925E5FEB-3A41-44F3-AC76-8203831F4577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925E5FEB-3A41-44F3-AC76-8203831F4577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925E5FEB-3A41-44F3-AC76-8203831F4577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925E5FEB-3A41-44F3-AC76-8203831F4577}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F762E9C7-8CF9-476C-BCD8-2DF9BC44D9B6}
+	EndGlobalSection
+EndGlobal
