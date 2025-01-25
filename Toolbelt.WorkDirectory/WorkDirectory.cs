@@ -1,4 +1,6 @@
-﻿namespace Toolbelt;
+﻿using System.Numerics;
+
+namespace Toolbelt;
 
 public class WorkDirectory : IDisposable
 {
@@ -10,7 +12,7 @@ public class WorkDirectory : IDisposable
 
     public WorkDirectory(string baseDir)
     {
-        this.Path = System.IO.Path.Combine(baseDir, Guid.NewGuid().ToString("N"));
+        this.Path = this.EnumFolderCandidates(baseDir).First(path => !Directory.Exists(path) && !File.Exists(path));
         Directory.CreateDirectory(this.Path);
     }
 
@@ -33,5 +35,25 @@ public class WorkDirectory : IDisposable
         var workDir = new WorkDirectory();
         workDir.CopyFrom(srcDir, predicate);
         return workDir;
+    }
+
+    private IEnumerable<string> EnumFolderCandidates(string baseDir)
+    {
+        for (; ; ) yield return System.IO.Path.Combine(baseDir, ToBase36(Guid.NewGuid().ToByteArray()));
+    }
+
+    private static string ToBase36(byte[] bytes)
+    {
+        const string chars = "0123456789abcdefghijklmnopqrstuvwxyz";
+
+        var result = new char[10];
+        var dividend = BigInteger.Abs(new BigInteger(bytes.Take(9).ToArray()));
+        for (var i = 0; i < 10; i++)
+        {
+            dividend = BigInteger.DivRem(dividend, 36, out var remainder);
+            result[i] = chars[(int)remainder];
+        }
+
+        return new string(result);
     }
 }
