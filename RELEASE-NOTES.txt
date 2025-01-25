@@ -1,2 +1,5 @@
+v.1.1.0
+- Shortened the working directory folder name to 10 characters.
+
 v.1.0.0
 - 1st release.

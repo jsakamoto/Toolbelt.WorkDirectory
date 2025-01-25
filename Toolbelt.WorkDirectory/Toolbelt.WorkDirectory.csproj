@@ -7,6 +7,7 @@
     <RootNamespace>Toolbelt</RootNamespace>
     <LangVersion>10</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,7 +15,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
     <Authors>J.Sakamoto</Authors>
     <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
@@ -22,7 +23,7 @@
     <PackageTags>workspace,workdir,workingdir</PackageTags>
     <PackageReleaseNotes>(Please write the package release notes in "../RELEASE-NOTES.txt")</PackageReleaseNotes>
     <PackageOutputPath>../_dist</PackageOutputPath>
-    <Copyright>Copyright © 2021 J.Sakamoto, Mozilla Public License 2.0</Copyright>
+    <Copyright>Copyright © 2021-2025 J.Sakamoto, Mozilla Public License 2.0</Copyright>
     <Description>Create a temporary working directory, copy files from a template, and finally, delete the working directory altogether when exiting a scope.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>nupkg-icon.png</PackageIcon>
